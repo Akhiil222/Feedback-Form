@@ -1,0 +1,103 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.3s ease;
+  }
+  .container {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    padding: 1rem;
+  }
+  
+
+  body.light {
+    background: #f9f9f9;
+    color: #000;
+  }
+  body.dark {
+    background: #1e1e1e;
+    color: #fff;
+  }
+  
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 1rem;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  
+  .feedback-form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .feedback-form input,
+  .feedback-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .feedback-form input:focus,
+  .feedback-form textarea:focus {
+    outline: 2px solid #2575fc;
+  }
+  .feedback-form button {
+    background: #2575fc;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  .feedback-form button:hover {
+    background: #6a11cb;
+  }
+  .message {
+    color: green;
+  }
+  
+ 
+  .feedback-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .feedback-card {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    width: 250px;
+    position: relative;
+  }
+  body.dark .feedback-card {
+    background: #333;
+    color: white;
+  }
+  .feedback-card button {
+    position: center;
+    top: 100px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .feedback-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
